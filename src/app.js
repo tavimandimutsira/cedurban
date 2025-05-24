@@ -51,7 +51,7 @@ app.use('/api/permissions', require('./routes/permissionRoutes'));
 //app.use('/api/counseling',             require('./routes/counselingRoutes'));
 //app.use('/api/prayer-requests',        require('./routes/prayerRequestRoutes'));
 //app.use('/api/member-counseling',      require('./routes/memberCounselingRoutes'));
-//.use('/api/member-prayer-requests', require('./routes/memberPrayerRequestRoutes'));
+//app.use('/api/member-prayer-requests', require('./routes/memberPrayerRequestRoutes'));
 //app.use('/api/notifications',          require('./routes/notificationRoutes'));
 //app.use('/api/cell-group-rules',       require('./routes/rulesRoutes'));
 //app.use('/api/designations',           require('./routes/designationRoutes'));
