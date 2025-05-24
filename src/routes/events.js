@@ -8,14 +8,12 @@ router.post('/', eventController.create);
 // Get all events
 router.get('/', eventController.list);
 
-// Get a single event by ID
-router.get('/:id', eventController.get);
-
-// Get events by member ID (attendance history)
+// ⚠️ Specific routes FIRST
+router.get('/member/:memberId/upcoming', eventController.getUpcomingWithoutRegistered);
 router.get('/member/:memberId', eventController.getByMemberId);
 
-// Get upcoming events with registration status for a member
-router.get('/member/:memberId/upcoming', eventController.getUpcomingWithoutRegistered);
+// ✅ Generic catch-all route LAST
+router.get('/:id', eventController.get);
 
 // Update an event by ID
 router.put('/:id', eventController.update);
