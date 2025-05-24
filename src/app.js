@@ -81,12 +81,6 @@ app.use('/api', require('./routes/pledgeRoutes'));
 // Health check
 app.get('/', (req, res) => res.send('RBAC + Membership Backend Running ✅'));
 
-// Serve React static files
-app.use(express.static(path.join(__dirname, '../client/build')));
 
-// SPA Fallback
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
 
 module.exports = app;
