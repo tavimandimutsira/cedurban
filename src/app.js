@@ -51,41 +51,41 @@ app.use('/api/milestones',             require('./routes/milestoneRecordRoutes')
 app.use('/api/counseling',             require('./routes/counselingRoutes'));
 app.use('/api/prayer-requests',        require('./routes/prayerRequestRoutes'));
 app.use('/api/member-counseling',      require('./routes/memberCounselingRoutes'));
-app.use('/api/member-prayer-requests', require('./routes/memberPrayerRequestRoutes'));
-app.use('/api/notifications',          require('./routes/notificationRoutes'));
-app.use('/api/cell-group-rules',       require('./routes/rulesRoutes'));
-app.use('/api/designations',           require('./routes/designationRoutes'));
-app.use('/api/cell-group-promotion-rules', require('./routes/promotionRuleRoutes'));
-app.use('/api/attendances',            require('./routes/attendanceRoutes'));
-app.use('/api/events',                 require('./routes/events'));
+//.use('/api/member-prayer-requests', require('./routes/memberPrayerRequestRoutes'));
+//app.use('/api/notifications',          require('./routes/notificationRoutes'));
+//app.use('/api/cell-group-rules',       require('./routes/rulesRoutes'));
+//app.use('/api/designations',           require('./routes/designationRoutes'));
+//app.use('/api/cell-group-promotion-rules', require('./routes/promotionRuleRoutes'));
+//app.use('/api/attendances',            require('./routes/attendanceRoutes'));
+//app.use('/api/events',                 require('./routes/events'));
 
 // Finance Module
-app.use('/api/income',                require('./routes/incomeRoutes'));
-app.use('/api/expenses',              require('./routes/expenseRoutes'));
-app.use('/api/accounts',              require('./routes/accountRoutes'));
-app.use('/api/account-transactions',  require('./routes/accountTransactionRoutes'));
-app.use('/api/budgets',               require('./routes/budgetRoutes'));
-app.use('/api/donations',             require('./routes/donationRoutes'));
-app.use('/api/pledges',               require('./routes/pledgeRoutes')); // ✅ Correct path
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+//app.use('/api/income',                require('./routes/incomeRoutes'));
+//app.use('/api/expenses',              require('./routes/expenseRoutes'));
+//app.use('/api/accounts',              require('./routes/accountRoutes'));
+//app.use('/api/account-transactions',  require('./routes/accountTransactionRoutes'));
+//app.use('/api/budgets',               require('./routes/budgetRoutes'));
+//app.use('/api/donations',             require('./routes/donationRoutes'));
+//app.use('/api/pledges',               require('./routes/pledgeRoutes')); // ✅ Correct path
+//app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Settings lookups
-app.use('/api/settings/account-types',             require('./routes/accountTypeRoutes'));
-app.use('/api/settings/expense-categories',        require('./routes/expenseCategoryRoutes'));
-app.use('/api/settings/payment-methods',           require('./routes/paymentMethodRoutes'));
-app.use('/api/settings/account-transaction-types', require('./routes/accountTransactionTypeRoutes'));
-app.use('/api/settings/currencies',                require('./routes/currencyRoutes'));
-app.use('/api/settings/banks',                     require('./routes/bankRoutes'));
-app.use('/api/settings',                           require('./routes/settingRoutes'));
-app.use('/api/settings/income-categories',         require('./routes/incomeCategoryRoutes'));
-app.use('/api/settings/badges',                    require('./routes/badgeRoutes'));
-app.use('/api/settings/member-badges',             require('./routes/memberBadgeRoutes'));
+//app.use('/api/settings/account-types',             require('./routes/accountTypeRoutes'));
+//app.use('/api/settings/expense-categories',        require('./routes/expenseCategoryRoutes'));
+//app.use('/api/settings/payment-methods',           require('./routes/paymentMethodRoutes'));
+//app.use('/api/settings/account-transaction-types', require('./routes/accountTransactionTypeRoutes'));
+//app.use('/api/settings/currencies',                require('./routes/currencyRoutes'));
+//app.use('/api/settings/banks',                     require('./routes/bankRoutes'));
+//app.use('/api/settings',                           require('./routes/settingRoutes'));
+//app.use('/api/settings/income-categories',         require('./routes/incomeCategoryRoutes'));
+//app.use('/api/settings/badges',                    require('./routes/badgeRoutes'));
+//app.use('/api/settings/member-badges',             require('./routes/memberBadgeRoutes'));
 
 // Misc
-app.use('/api/import-columns', require('./routes/importColumnRoutes'));
+//app.use('/api/import-columns', require('./routes/importColumnRoutes'));
 
 // Member‐side finance (MVC)
-app.use('/api/contributions', require('./routes/contributionRoutes'));
+//app.use('/api/contributions', require('./routes/contributionRoutes'));
 
 // Health check
 app.get('/', (req, res) => res.send('RBAC + Membership Backend Running ✅'));
