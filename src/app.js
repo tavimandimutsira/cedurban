@@ -9,7 +9,7 @@ const app = express();
 // ✅ CORS Configuration
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://cedurbanzone.onrender.com', // Replace with your real frontend URL(s)
+  'https://cedurbanmain-zeed.onrender.com', // Replace with your real frontend URL(s)
 ];
 
 app.use(cors({
