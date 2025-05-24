@@ -66,6 +66,7 @@ app.use('/api/accounts',              require('./routes/accountRoutes'));
 app.use('/api/account-transactions',  require('./routes/accountTransactionRoutes'));
 app.use('/api/budgets',               require('./routes/budgetRoutes'));
 app.use('/api/donations',             require('./routes/donationRoutes'));
+app.use('/api/pledges',               require('./routes/pledgeRoutes')); // ✅ Correct path
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Settings lookups
@@ -77,22 +78,18 @@ app.use('/api/settings/currencies',                require('./routes/currencyRou
 app.use('/api/settings/banks',                     require('./routes/bankRoutes'));
 app.use('/api/settings',                           require('./routes/settingRoutes'));
 app.use('/api/settings/income-categories',         require('./routes/incomeCategoryRoutes'));
-app.use('/api/settings/badges', require('./routes/badgeRoutes'));
-app.use('/api/settings/member-badges', require('./routes/memberBadgeRoutes'));
-app.use('/api/settings/pledges', require('./routes/pledgeRoutes'));
-// Mount routes
+app.use('/api/settings/badges',                    require('./routes/badgeRoutes'));
+app.use('/api/settings/member-badges',             require('./routes/memberBadgeRoutes'));
+
+// Misc
 app.use('/api/import-columns', require('./routes/importColumnRoutes'));
 
-
-
-
-
 // Member‐side finance (MVC)
-app.use('/api', require('./routes/contributionRoutes'));
-app.use('/api', require('./routes/pledgeRoutes'));
+app.use('/api/contributions', require('./routes/contributionRoutes'));
 
 // Health check
 app.get('/', (req, res) => res.send('RBAC + Membership Backend Running ✅'));
+
 
 // Serve React static files
 app.use(express.static(path.join(__dirname, '../client/build')));
